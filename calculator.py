@@ -2,13 +2,13 @@
 # tokenize the string
 # evaluate the second and third tokens based on the first
 
-from arithmetic.py import *
+from arithmetic import *
 
-command = raw_input.split(" ")
+user_tired = raw_input("> ")
+
+command = user_tired.split()
+
+print command
 
 if command[0] == "+":
-    add(command[1], command[2])
-elif command[0] == "-":
-    subtract(command[1], command[2])
-elif command[0] == "*":
-    multiply(command[1], command[2])
+    print add(int(command[1]), int(command[2]))
