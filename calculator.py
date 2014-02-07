@@ -4,11 +4,17 @@
 
 from arithmetic import *
 
-user_tired = raw_input("> ")
+user_input = raw_input("> ")
 
-command = user_tired.split()
+command = user_input.split()
 
-print command
+methods = {
+    "+": add,
+    "-": subtract,
+    "*": multiply
+}
 
 if command[0] == "+":
     print add(int(command[1]), int(command[2]))
+if command[0] == "-":
+    print subtract(int(command[1]), int(command[2]))
